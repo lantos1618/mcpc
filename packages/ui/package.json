@@ -1,0 +1,22 @@
+{
+  "name": "@mcpc/ui",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/cjs/index.js",
+  "types": "dist/esm/index.d.ts",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist/esm --format esm --dts --external @mcpc/core --external react --external zod --tsconfig ./tsconfig.json && bun build ./src/index.ts --outdir ./dist/cjs --format cjs --dts --external @mcpc/core --external react --external zod --tsconfig ./tsconfig.json"
+  },
+  "dependencies": {
+    "@mcpc/core": "workspace:*",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0"
+  }
+} 

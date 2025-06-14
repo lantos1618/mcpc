@@ -1,0 +1,17 @@
+{
+  "name": "@mcpc/core",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/cjs/index.js",
+  "types": "dist/esm/index.d.ts",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist/esm --format esm --dts && bun build ./src/index.ts --outdir ./dist/cjs --format cjs --dts"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+} 

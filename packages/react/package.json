@@ -1,0 +1,21 @@
+{
+  "name": "@mcpc/react",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/cjs/index.js",
+  "types": "dist/esm/index.d.ts",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist/esm --format esm --dts --external @mcpc/core --external react && bun build ./src/index.ts --outdir ./dist/cjs --format cjs --dts --external @mcpc/core --external react"
+  },
+  "dependencies": {
+    "@mcpc/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0"
+  }
+} 
